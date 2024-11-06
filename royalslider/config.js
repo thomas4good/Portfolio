@@ -24,7 +24,7 @@ jQuery(document).ready(function($)
         controlNavigationSpacing: 0,
         controlNavigation: 'thumbnails',
         globalCaption:true,
-        startSlideId: 1,
+        startSlideId: 0,
         imageScaleMode: 'none',
         imageAlignCenter:false,
         loop: true,
