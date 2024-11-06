@@ -60,8 +60,8 @@
 
 .rsArrow,
 .rsThumbsArrow {
-    width: 30px; /* Adjust size of arrows */
-    height: 30px;
+    width: 100px; /* Adjust size of arrows */
+    height: 100px;
 }
 
 /* Make sure thumbnails stack vertically */

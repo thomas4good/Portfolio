@@ -3,7 +3,7 @@ html, body
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10pt;
   font-weight: normal;
   font-style: normal;
@@ -21,6 +21,19 @@ figure {
   position: relative;
   cursor: pointer;
 }
+
+.icon
+{
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  display: inline-block;
+}
+
+#linkedin { background-image: url('../images/li.png'); }
+#email { background-image: url('../images/icon_email.png'); }
+
+
 figure:before,
 figure:after {
   position: absolute;
@@ -51,26 +64,8 @@ figure.play:before {
     width: 72px
 }
 
-@font-face
-{
-  font-family: alternate-gothic-no-2-d;
-  src: url('../fonts/AlternateGothicNo2DRegular.ttf'),
-  url('../fonts/AlternateGothicNo2DRegular.ttf');
-}
 
-@font-face
-{
-  font-family: adobe-garamond-pro-italic;
-  src: url('../fonts/AdobeGaramondProItalic.ttf'),
-  url('../fonts/AdobeGaramondProItalic.ttf');
-}
 
-@font-face
-{
-  font-family: adobe-garamond;
-  src: url('../fonts/AdobeGaramond.ttf'),
-  url('../fonts/AdobeGaramond.ttf');
-}
 
 #wrap
 {
@@ -78,8 +73,8 @@ figure.play:before {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 50px; /* height of thumbs (if not required set to 0) */
-  height: auto; /* optionally add !important for WP version */
+  bottom: 50px; 
+  height: auto; 
   width: auto;
 }
 
@@ -91,7 +86,6 @@ figure.play:before {
 
 .slide
 {
-  /*background-color: #fff;*/
   width: 80%;
   max-width: 1800px;
   min-height: 75%;
@@ -110,7 +104,7 @@ figure.play:before {
 .label
 {
   border-radius: 4px;
-  font-family: Helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.9em;
   text-align: center;
   color: #fff;
@@ -153,17 +147,6 @@ figure.play:before {
   content: "2D Art";
 }
 
-/*
-.screenshot
-{
-  display: block;
-  height: 360px;
-  width: 640px;
-  border-radius: 4px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  float: left;
-}*/
 
 .screenshot {
   width: 65%;
@@ -178,8 +161,13 @@ figure.play:before {
   background-size: 100%;
   box-shadow: 4px 4px 20px -6px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  padding-right: 100px;
-  margin-right: 40px; /* Add space between the image and text */
+  margin-right: 30px; /* Adjusted to add space between image and text */
+}
+.intro-image {
+  display: block;
+  margin: 0 auto 20px; /* Centers the image and adds spacing below */
+  max-width: 40%; /* Shrinks image size by 25% */
+  height: auto; /* Maintains aspect ratio */
 }
 
 ul
@@ -188,7 +176,11 @@ ul
   font-weight: bold;
 }
 
-li { margin-left: -1em }
+li 
+{ 
+  margin-left: -1em;
+  margin-bottom: 10px; /* Adjust the value as needed for desired spacing */
+}
 
 .video
 {
@@ -206,29 +198,6 @@ li { margin-left: -1em }
   border-radius: 6px;
 }
 
-
-/* different aspect ratios for images */
-/*.threetwo
-{
-  width: 540px;
-  height: 360px;
-  margin-left: 50px;
-}
-
-.fourthree
-{
-  width: 480px;
-  height: 360px;
-  margin-left: 80px;
-}
-
-.square
-{
-  width: 360px;
-  height: 360px;
-  margin-left: 140px;
-}*/
-
 /* different aspect ratios for images */
 .threetwo
 {
@@ -245,21 +214,6 @@ li { margin-left: -1em }
   width: 39%;
   padding-top: calc(0.39 * 100%);
 }
-
-/* images for the slides */
-.ka  { background-image: url("../images/ka_gif.gif"); }
-.ssq { background-image: url("../images/ssq_gif.gif"); }
-.goe { background-image: url("../images/goe_gif.gif"); }
-.geo { background-image: url("../images/geo_gif.gif"); }
-.mr2 { background-image: url("../images/mr2_gif.gif"); }
-.ichi { background-image: url("../images/ichi_gif.gif"); }
-.paz { background-image: url("../images/paz_gif.gif"); }
-.duet { background-image: url("../images/duet_gif.gif"); }
-.eot { background-image: url("../images/eot_gif.gif"); }
-.ice { background-image: url("../images/ice_gif.gif"); }
-.toki { background-image: url("../images/toki_gif.gif"); }
-.jay { background-image: url("../images/picture.jpg"); } 
-.stagerush { background-image: url("../images/stagerush.jpg"); } 
 
 .youtube
 {
@@ -280,11 +234,11 @@ li { margin-left: -1em }
 
 /* Adjust description styling for vertical layout */
 .description, .description-me {
-  width: 100%; /* Take up the full width */
-  margin: 0; /* Reset any margins */
-  height: auto; /* Adjust height to fit content */
-  float: none; /* Remove float to stack content vertically */
-  text-align: left; /* Center text */
+  width: 30%; /* Adjust width to fit next to .screenshot */
+  margin: 0;
+  padding-left: 10px; /* Adds a bit more space if desired */
+  text-align: left; /* Left align text */
+  float: left;
 }
 
 @media only screen and (max-width: 1280px)
@@ -297,17 +251,11 @@ li { margin-left: -1em }
 
 @media only screen and (max-width: 768px)
 {
-  /* hide navigation
-  .rsNav
-  {
-    display:none; width:0 !important; height:0 !important; 
-  }*/
 
-/* Ensure videos and screenshots take up the full width in vertical mode */
 .video, .screenshot {
-  width: 100%; /* Full width */
-  height: auto; /* Auto height based on aspect ratio */
-  margin: 20px 0; /* Add some space between slides */
+  width: 100%; 
+  height: auto; 
+  margin: 20px 0; 
 }
 
   .square
@@ -362,14 +310,6 @@ li { margin-left: -1em }
   width: 44px;
   }
 
-  /*.rsDefault .rsThumbsHor {
-  height: 12vw;
-  }
-
-  .rsDefault .rsThumb {
-    width: 10.6vw;
-    height: 10.6vw;
-  }*/
 }
 
 
@@ -380,7 +320,7 @@ li { margin-left: -1em }
 
 .title-project
 {
-  font-family: alternate-gothic-no-2-d;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.4rem;
   font-weight: normal;
   font-style: normal;
@@ -411,7 +351,7 @@ li { margin-left: -1em }
 
 #title
 {
-  font-family: alternate-gothic-no-2-d;
+  font-family: 'Roboto', sans-serif;
   font-size: 55pt;
   font-weight: normal;
   width: 100%;
@@ -424,7 +364,7 @@ li { margin-left: -1em }
 
 #sub-title
 {
-  font-family: adobe-garamond-pro-italic;
+  font-family: 'Roboto', sans-serif;
   font-size: 13pt;
   font-weight: normal;
   font-style: normal;
@@ -438,7 +378,7 @@ li { margin-left: -1em }
 
 #intro-text
 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10pt;
   font-weight: normal;
   font-style: normal;
